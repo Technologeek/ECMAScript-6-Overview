@@ -23,4 +23,36 @@ constant Obj = {
 Obj.value = 35; //Changes the value
 console.log(Obj);
 ```
+- #### **let** (Used for Block-Scoping )
+##### let could be used just like var, except it supports block-scoping
+```javascript
+if(true_condition){
+let age = 30;
+}
+console.log(age); //Throws ReferenceError: age is not defined
+//
+if(true_condition){
+let age = 30;
+console.log(age); //Returns 30
+}
+```
+- #### **Arrow Functions** (coolest feature yet!)
+```javascript
+//General Function
+function fx(){
+console.log("Hello")
+}
+fx();
 
+//Arrow'izing it as ES6 standards
+var fx = () => console.log("Hello");
+fx();
+
+//If function returns something,
+var fx = () => "Hello";
+console.log(fx());
+
+//Works great with arguments too!
+var fx = (a,b) => a+b;
+console.log(fx(3,5)); //Returns 8
+```
