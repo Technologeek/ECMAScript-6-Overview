@@ -64,9 +64,11 @@ function IsEqualTo(number1,number2) {
 return number1 == number2;
 }
 console.log(IsEqualTo(10,10)); //Logs true
+
 //Doing this Es6 way (giving values for default parameters)
 var IsEqualTo = (number1=10,number2=12) =>number1 == number2;
 console.log(IsEqualTo()); //Logs false
+
 //You can play around by passing values for different parameters
 var IsEqualTo = (number1,number2=12) => number1 == number2;
 console.log(IsEqualTo(12)); //Logs True
