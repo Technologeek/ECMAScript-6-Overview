@@ -76,7 +76,8 @@ console.log(IsEqualTo(12)); //Logs True
 
 - #### **Rest Parameter**
 According to the definition from  ECMAScript 6 
->Aggregation of remaining arguments into single parameter of variadic functions.
+
+> Aggregation of remaining arguments into single parameter of variadic functions.
 
 Bouncer ? Let me simplify that!
 ##### Rest Paramter allows you to pass dynamic values as arguments.
