@@ -73,3 +73,34 @@ console.log(IsEqualTo()); //Logs false
 var IsEqualTo = (number1,number2=12) => number1 == number2;
 console.log(IsEqualTo(12)); //Logs True
 ```
+
+- #### **Rest Parameter**
+According to the definition from  ECMAScript 6 
+>Aggregation of remaining arguments into single parameter of variadic functions.
+
+Bouncer ? Let me simplify that!
+##### Rest Paramter allows you to pass dynamic values as arguments.
+
+```javascript
+//Function to add numbers in an pre-defined array
+var numbers = [12,13,14,15];
+function addNumbers(numberArray){
+  var result = 0;
+  for(var i = 0; i<numberArray.length; i++){
+     result+=numberArray[i];
+  }
+  return result;
+}
+console.log(addNumbers(numbers)); //Logs 54, but hey don't you wish there was a easier way to pass dynamic values as arguments instead of the predefined array ? With ES6,you can!
+
+//Let's write the same function using Rest Parameter or (...) opeartor! (Yes,three dots!)
+function addNumbers(...numberArray){
+  var result = 0;
+  for(var i = 0;i<numberArray.length;i++){
+     result+=numberArray[i];
+  }
+  return result;
+}
+console.log(addNumbers(15,16,17,18)); //Logs 66
+console.log(addNumbers(12,136,1,13)); //Logs 162 
+```
