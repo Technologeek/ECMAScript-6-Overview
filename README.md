@@ -105,3 +105,30 @@ function addNumbers(...numberArray){
 console.log(addNumbers(15,16,17,18)); //Logs 66
 console.log(addNumbers(12,136,1,13)); //Logs 162 
 ```
+#### Extended Parameter Handling
+> Spreading of elements of an iterable collection (like an array or even a string) into both literal elements and individual function parameters.
+
+In short words,spread operator is opposite of rest parameter.Quite self-explianatory if you read [this page.](http://es6-features.org/#SpreadOperator)
+
+- #### **Template Literals**
+##### Also known as template strings,provides a better way of handling in-string manipulations.Though it may sound complicated but it actually isn't.
+
+> Template string uses `` literal around the content.I don't know the official name for it,but let's call it the back-tick for now.
+
+```javascript
+//Traditional way
+var employee = { name: "Foo" };
+var emp_details = { days: 30, dept: "Admin", salary: 420 };
+//Printing employee details with the given data
+var details = "Hello " + employee.name + ",\n" + "your salary for 30 days is " +
+(emp_details.days * emp_details.salary) + " rupees" ;
+console.log(details); //Logs "Hello Foo, your salary for 30 days is 12600 rupees"
+
+//Using Template String 
+var employee = { name: "Foo" }
+var emp_details = { days: 30, dept: "Admin", salary: 420 }
+//Check the back-tick before "Hello" and after "rupees"
+var details = `Hello ${employee.name},your salary for 30 days is ${emp_details.days * emp_details.salary} rupees`
+console.log(details); //Logs "Hello Foo, your salary for 30 days is 12600 rupees"
+```
+>Less messey right ? If you're used to server side processing languages like SASS you would know how convinient it is to use interpolation that is "${ }" for slotting values into other values.
