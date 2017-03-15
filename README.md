@@ -132,3 +132,37 @@ var details = `Hello ${employee.name},your salary for 30 days is ${emp_details.d
 console.log(details); //Logs "Hello Foo, your salary for 30 days is 12600 rupees"
 ```
 >Less messey right ? If you're used to server side processing languages like SASS you would know how convinient it is to use interpolation that is "${ }" for slotting values into other values.
+
+- #### **Destructuring Arrays and Objects**
+##### As the title says,Destructuring is basically breaking down of complex objects into simple  individual variables during assignment.Don't worry if you didn't get that,below example should make it clear(I hope).
+```javascript
+//Consider an example of swapping two numbers 
+// Traditional way
+var swap = [5,10,20];
+var a = swap[0],b = swap[2];
+console.log(a,b); //logs 5,20
+var temp = a; a = b; b = temp;
+console.log(a,b); //logs 20,5
+
+//By Destructuring the arry
+var swap = [5,10,20];
+var [a, ,b] = swap
+console.log(a,b); //logs 5,20
+[b, a] = [a, b]
+console.log(a,b); //logs 20,5
+//Also,you will notice that the original array is not changed
+console.log(swap); //logs [5, 10, 20]
+
+var swap = [5,10,20];
+var [a, ,b] = swap //Referencing the array by Pattern Matching as the original array
+console.log(swap); //logs [5,10,20]
+var newswap = [a,b]; //Destructing the original array 
+console.log(newswap); //logs [5, 20]
+```
+>Take a note how we left an empty space between a and b [a, ,20] as compared to the original array.
+That's the basics of destructuring for now.Simiarly you can destructure objects in JavaScript.
+
+
+
+
+
