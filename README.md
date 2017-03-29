@@ -162,6 +162,28 @@ console.log(newswap); //logs [5, 20]
 >Take a note how we left an empty space between a and b [a, ,20] as compared to the original array.
 That's the basics of destructuring for now.Simiarly you can destructure objects in JavaScript.
 
+- #### **Classes**
+##### They're here! Finally!Say good-bye to your traditional var num = function() {} way of 'achieving' object oriented paradigm in javascript! Not just classes but ES6 brings other OOP concepts like inhertience,base classes etc.
+It wouldn't be difficult for you to follow if you have programmed in pure Object Oriented Language before.
+Quite Self Explianatory : http://es6-features.org/#ClassDefinition
+
+- #### **Set and Map Data Structures**
+##### From the definition 
+>Cleaner data-structure for common algorithms based on sets.
+
+In my words,a simple work around to reduce array based or object-key based operations that involves use of indexOf() anf filter() functions.Sets are comparatively faster.
+
+```javascript
+//Basic Set Operation
+let s = new Set();
+s.add('Red').add('Yellow').add('Green')
+for(let key of s.values()){
+console.log(key); //logs Red Yellow Green,in that order
+}
+s.clear();
+console.log(s); //Returns an empty set [object Set] { ... }
+```
+
 
 
 
